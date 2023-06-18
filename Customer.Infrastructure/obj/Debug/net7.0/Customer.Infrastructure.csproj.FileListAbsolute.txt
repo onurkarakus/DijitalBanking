@@ -1,0 +1,17 @@
+G:\Repos\DijitalBankingSolution\Customer.Infrastructure\obj\Debug\net7.0\Customer.Infrastructure.csproj.AssemblyReference.cache
+G:\Repos\DijitalBankingSolution\Customer.Infrastructure\obj\Debug\net7.0\Customer.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+G:\Repos\DijitalBankingSolution\Customer.Infrastructure\obj\Debug\net7.0\Customer.Infrastructure.AssemblyInfoInputs.cache
+G:\Repos\DijitalBankingSolution\Customer.Infrastructure\obj\Debug\net7.0\Customer.Infrastructure.AssemblyInfo.cs
+G:\Repos\DijitalBankingSolution\Customer.Infrastructure\obj\Debug\net7.0\Customer.Infrastructure.csproj.CoreCompileInputs.cache
+G:\Repos\DijitalBankingSolution\Customer.Infrastructure\bin\Debug\net7.0\Customer.Infrastructure.deps.json
+G:\Repos\DijitalBankingSolution\Customer.Infrastructure\bin\Debug\net7.0\Customer.Infrastructure.runtimeconfig.json
+G:\Repos\DijitalBankingSolution\Customer.Infrastructure\bin\Debug\net7.0\Customer.Infrastructure.dll
+G:\Repos\DijitalBankingSolution\Customer.Infrastructure\bin\Debug\net7.0\Customer.Infrastructure.pdb
+G:\Repos\DijitalBankingSolution\Customer.Infrastructure\bin\Debug\net7.0\Customer.Domain.dll
+G:\Repos\DijitalBankingSolution\Customer.Infrastructure\bin\Debug\net7.0\Customer.Domain.pdb
+G:\Repos\DijitalBankingSolution\Customer.Infrastructure\obj\Debug\net7.0\Customer.Infrastructure.csproj.CopyComplete
+G:\Repos\DijitalBankingSolution\Customer.Infrastructure\obj\Debug\net7.0\Customer.Infrastructure.dll
+G:\Repos\DijitalBankingSolution\Customer.Infrastructure\obj\Debug\net7.0\refint\Customer.Infrastructure.dll
+G:\Repos\DijitalBankingSolution\Customer.Infrastructure\obj\Debug\net7.0\Customer.Infrastructure.pdb
+G:\Repos\DijitalBankingSolution\Customer.Infrastructure\obj\Debug\net7.0\Customer.Infrastructure.genruntimeconfig.cache
+G:\Repos\DijitalBankingSolution\Customer.Infrastructure\obj\Debug\net7.0\ref\Customer.Infrastructure.dll
