@@ -7,12 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Commands\Handlers\" />
-    <Folder Include="Commands\Request\" />
-    <Folder Include="Commands\Response\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="AutoMapper" Version="12.0.1" />
     <PackageReference Include="MediatR" Version="12.0.1" />
   </ItemGroup>

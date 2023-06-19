@@ -24,13 +24,9 @@ public class CustomerSecurity : AuditableEntity<int>
     /// <value>The password.</value>
     public string Password { get; set; }
 
-    /// <summary>Gets or sets the email.</summary>
-    /// <value>The email.</value>
-    public string Email { get; set; }
-
-    /// <summary>Gets or sets the mobile number.</summary>
-    /// <value>The mobile number.</value>
-    public string MobileNumber { get; set; }
+    /// <summary>Gets or sets the password salt.</summary>
+    /// <value>The password salt.</value>
+    public string PasswordSalt { get; set; }
 
     /// <summary>Gets or sets the security question.</summary>
     /// <value>The security question.</value>
@@ -38,16 +34,7 @@ public class CustomerSecurity : AuditableEntity<int>
 
     /// <summary>Gets or sets the security answer.</summary>
     /// <value>The security answer.</value>
-    public string SecurityAnswer { get; set; }
-
-    /// <summary>Gets or sets a value indicating whether this instance is locked.</summary>
-    /// <value>
-    ///   <c>true</c> if this instance is locked; otherwise, <c>false</c>.</value>
-    public bool IsLocked { get; set; }
-
-    /// <summary>Gets or sets the last locked date time.</summary>
-    /// <value>The last locked date time.</value>
-    public DateTime? LastLockedDateTime { get; set; }
+    public string SecurityAnswer { get; set; }    
 
     /// <summary>Gets or sets the last login date time.</summary>
     /// <value>The last login date time.</value>
@@ -63,5 +50,5 @@ public class CustomerSecurity : AuditableEntity<int>
 
     /// <summary>Gets or sets the last updated date time.</summary>
     /// <value>The last updated date time.</value>
-    public DateTime? LastUpdatedDateTime { get; set; }        
+    public DateTime? LastUpdatedDateTime { get; set; }
 }

@@ -13,7 +13,7 @@ namespace Customer.Business.Queries.Handlers;
 
 public class GetCustomerInformationHandler : IRequestHandler<GetCustomerInformationRequest, GetCustomerInformationResponse>
 {
-    private CustomerDbContext _customerDbContext;
+    private readonly CustomerDbContext _customerDbContext;
     private readonly ICustomerInformationRespository _customerInformationRepository;
     private readonly IMapper _mapper;
     private readonly UnitOfWork<int> _unitOfWork;
@@ -27,14 +27,7 @@ public class GetCustomerInformationHandler : IRequestHandler<GetCustomerInformat
 
     public async Task<GetCustomerInformationResponse> Handle(GetCustomerInformationRequest request, CancellationToken cancellationToken)
     {
-        var customerInformation = await _customerInformationRepository.GetByIdAsync(request.CustomerId);
-
-        if (customerInformation == null)
-        {
-            //create NotFoundException
-            throw new NotFoundException(nameof(CustomerInformation), request.CustomerId);
-        }
-
+        var customerInformation = await _customerInformationRepository.GetByIdAsync(request.CustomerId) ?? throw new NotFoundException(nameof(CustomerInformation), request.CustomerId);
         var customerInformationDto = _mapper.Map<CustomerInformationDto>(customerInformation);
 
         return new GetCustomerInformationResponse

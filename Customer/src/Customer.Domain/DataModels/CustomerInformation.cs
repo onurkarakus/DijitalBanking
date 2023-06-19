@@ -25,5 +25,17 @@ public class CustomerInformation: AuditableEntity<int>
 
     /// <summary>Gets or sets the favorite team.</summary>
     /// <value>The favorite team.</value>
-    public string FavoriteTeam { get; set; }
+    public string FavoriteFootballTeam { get; set; }
+
+    /// <summary>Gets or sets the email address.</summary>
+    /// <value>The email address.</value>
+    public string EmailAddress { get; set; }
+
+    /// <summary>Gets or sets the mobile number.</summary>
+    /// <value>The mobile number.</value>
+    public string MobileNumber { get; set; }
+
+    /// <summary>Gets or sets the address.</summary>
+    /// <value>The address.</value>
+    public string Address { get; set; }
 }
