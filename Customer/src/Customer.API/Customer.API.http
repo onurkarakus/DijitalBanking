@@ -1,0 +1,39 @@
+﻿@Customer.API_HostAddress = http://localhost:5028
+
+GET {{Customer.API_HostAddress}}/api/customerinformation?CustomerId=1
+
+###
+
+POST {{Customer.API_HostAddress}}/api/customerinformation
+Content-Type: application/json
+
+{
+  "firstName": "TestFirstName",
+  "middleName": "TestMiddleName",
+  "lastName": "TestLastName",
+  "birthDate": "2023-06-21T20:58:07.345Z",
+  "favoriteFootballTeam": "Beşiktaş",
+  "emailAddress": "test@test.com",
+  "mobileNumber": "5550121455",
+  "address": "Test Adres Bilisi",
+  "addressDescription": "Test Adres Tanımı",
+  "isFavoriteAddress": true,
+  "userName": "testuser",
+  "password": "123456",
+  "securityQuestion": "En sevdiğin kitap?",
+  "securityAnswer": "1984",
+  "applyForAccount": true,
+  "applyforCreditCard": true
+}
+
+###
+
+POST {{Customer.API_HostAddress}}/api/customerauth
+Content-Type: application/json
+
+{
+  "userName": "testuser",
+  "password": "123456"
+}
+
+###

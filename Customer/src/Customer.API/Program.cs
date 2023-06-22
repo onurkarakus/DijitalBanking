@@ -1,13 +1,14 @@
-using Customer.Business.Queries.Handlers;
+using Customer.Business.Services;
+using Customer.Business.Utilities;
 using Customer.Domain.Interfaces.Respoistories;
 using Customer.Domain.Interfaces.Respoistories.Base;
+using Customer.Domain.Interfaces.Services;
+using Customer.Domain.Interfaces.Utilities;
 using Customer.Infrastructure;
 using Customer.Infrastructure.DbContextInformation;
 using Customer.Infrastructure.Repositories;
 using Customer.Infrastructure.Repositories.Base;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -31,6 +32,10 @@ builder.Services.AddAutoMapper(Assembly.Load("Customer.Domain"));
 builder.Services.AddTransient(typeof(IUnitOfWork<>), typeof(UnitOfWork<>));
 builder.Services.AddTransient(typeof(IBaseRepository<,>), typeof(BaseRepository<,>));
 builder.Services.AddTransient<ICustomerInformationRespository, CustomerInformationRepository>();
+builder.Services.AddTransient<ICustomerSecurityRespository, CustomerSecurityRepository>();
+
+builder.Services.AddSingleton<ICryptographyUtility, CryptographyUtility>();
+builder.Services.AddSingleton<ITokenService, TokenService>();
 
 var app = builder.Build();
 

@@ -38,4 +38,13 @@ public class CustomerInformation: AuditableEntity<int>
     /// <summary>Gets or sets the address.</summary>
     /// <value>The address.</value>
     public string Address { get; set; }
+
+    /// <summary>Gets or sets the address description.</summary>
+    /// <value>The address description.</value>
+    public string AddressDescription { get; set; }
+
+    /// <summary>Gets or sets a value indicating whether this instance is favorite address.</summary>
+    /// <value>
+    ///   <c>true</c> if this instance is favorite address; otherwise, <c>false</c>.</value>
+    public bool IsFavoriteAddress { get; set; }
 }

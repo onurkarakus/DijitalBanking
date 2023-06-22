@@ -35,6 +35,10 @@ namespace Customer.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("AddressDescription")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime>("BirthDate")
                         .HasColumnType("datetime2");
 
@@ -56,6 +60,9 @@ namespace Customer.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<bool>("IsFavoriteAddress")
+                        .HasColumnType("bit");
+
                     b.Property<string>("LastName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -68,11 +75,11 @@ namespace Customer.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("UpdateDate")
-                        .HasColumnType("datetime2");
-
                     b.Property<string>("UpdatedBy")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdatedDate")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
@@ -83,17 +90,19 @@ namespace Customer.Infrastructure.Migrations
                         {
                             Id = 1,
                             Address = "Test Adres Bilgisi",
+                            AddressDescription = "Ev Adresi",
                             BirthDate = new DateTime(1980, 1, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             CreatedBy = "SeedBatch",
-                            CreatedDate = new DateTime(2023, 6, 20, 0, 20, 41, 61, DateTimeKind.Local).AddTicks(6515),
+                            CreatedDate = new DateTime(2023, 6, 21, 0, 5, 28, 97, DateTimeKind.Local).AddTicks(8919),
                             EmailAddress = "test@test.com",
                             FavoriteFootballTeam = "Galatasaray",
                             FirstName = "Mehmet",
+                            IsFavoriteAddress = true,
                             LastName = "Yılmaz",
                             MiddleName = "Onur",
                             MobileNumber = "5555555555",
-                            UpdateDate = new DateTime(2023, 6, 20, 0, 20, 41, 61, DateTimeKind.Local).AddTicks(6527),
-                            UpdatedBy = "SeedBatch"
+                            UpdatedBy = "SeedBatch",
+                            UpdatedDate = new DateTime(2023, 6, 21, 0, 5, 28, 97, DateTimeKind.Local).AddTicks(8936)
                         });
                 });
 
@@ -143,11 +152,11 @@ namespace Customer.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("UpdateDate")
-                        .HasColumnType("datetime2");
-
                     b.Property<string>("UpdatedBy")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdatedDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("UserName")
                         .IsRequired()

@@ -18,6 +18,6 @@ public class AuditableEntity<TId> : IAuditEntity<TId>
 
     public string? UpdatedBy { get; set; }
 
-    public DateTime? UpdateDate { get; set; }
+    public DateTime? UpdatedDate { get; set; }
 
 }

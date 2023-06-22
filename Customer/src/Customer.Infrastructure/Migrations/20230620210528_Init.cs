@@ -29,10 +29,12 @@ namespace Customer.Infrastructure.Migrations
                     EmailAddress = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     MobileNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Address = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    AddressDescription = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    IsFavoriteAddress = table.Column<bool>(type: "bit", nullable: false),
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    UpdateDate = table.Column<DateTime>(type: "datetime2", nullable: true)
+                    UpdatedDate = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -59,7 +61,7 @@ namespace Customer.Infrastructure.Migrations
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    UpdateDate = table.Column<DateTime>(type: "datetime2", nullable: true)
+                    UpdatedDate = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -76,8 +78,8 @@ namespace Customer.Infrastructure.Migrations
             migrationBuilder.InsertData(
                 schema: "Customer",
                 table: "CustomerInformation",
-                columns: new[] { "Id", "Address", "BirthDate", "CreatedBy", "CreatedDate", "EmailAddress", "FavoriteFootballTeam", "FirstName", "LastName", "MiddleName", "MobileNumber", "UpdateDate", "UpdatedBy" },
-                values: new object[] { 1, "Test Adres Bilgisi", new DateTime(1980, 1, 25, 0, 0, 0, 0, DateTimeKind.Unspecified), "SeedBatch", new DateTime(2023, 6, 20, 0, 20, 41, 61, DateTimeKind.Local).AddTicks(6515), "test@test.com", "Galatasaray", "Mehmet", "Yılmaz", "Onur", "5555555555", new DateTime(2023, 6, 20, 0, 20, 41, 61, DateTimeKind.Local).AddTicks(6527), "SeedBatch" });
+                columns: new[] { "Id", "Address", "AddressDescription", "BirthDate", "CreatedBy", "CreatedDate", "EmailAddress", "FavoriteFootballTeam", "FirstName", "IsFavoriteAddress", "LastName", "MiddleName", "MobileNumber", "UpdatedBy", "UpdatedDate" },
+                values: new object[] { 1, "Test Adres Bilgisi", "Ev Adresi", new DateTime(1980, 1, 25, 0, 0, 0, 0, DateTimeKind.Unspecified), "SeedBatch", new DateTime(2023, 6, 21, 0, 5, 28, 97, DateTimeKind.Local).AddTicks(8919), "test@test.com", "Galatasaray", "Mehmet", true, "Yılmaz", "Onur", "5555555555", "SeedBatch", new DateTime(2023, 6, 21, 0, 5, 28, 97, DateTimeKind.Local).AddTicks(8936) });
 
             migrationBuilder.CreateIndex(
                 name: "IX_CustomerSecurity_CustomerId",

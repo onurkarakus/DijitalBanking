@@ -1,9 +1,6 @@
 ﻿using Customer.Business.Commands.Request;
 using Customer.Business.Queries.Request;
-using Customer.Business.Queries.Response;
 using MediatR;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Customer.API.Controllers;
@@ -13,7 +10,6 @@ namespace Customer.API.Controllers;
 public class CustomerInformationController : ControllerBase
 {
     readonly IMediator mediator;
-
 
     public CustomerInformationController(IMediator mediator)
     {

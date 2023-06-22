@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "nGBEQWCSH59OEP9473ax3jFb+IDbH2trMPhM107acvCfxRF+SJlaqycNR9Ibdn0Rn3Ec33AaFOpLIjwW/Yxv6A==",
+  "dgSpecHash": "VN9sjwRdGg4lnV+xSpdjMNSdg3C6V4Vy2ntBLI8xFfoYHlOiTOQQNLNpupWbFPsCMmOtA3GxwfeehJdnbqNg2w==",
   "success": true,
   "projectFilePath": "G:\\Repos\\DijitalBankingSolution\\Customer\\src\\Customer.API\\Customer.API.csproj",
   "expectedPackageFiles": [
@@ -11,6 +11,7 @@
     "C:\\Users\\onurk\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\onurk\\.nuget\\packages\\mediatr\\12.0.1\\mediatr.12.0.1.nupkg.sha512",
     "C:\\Users\\onurk\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\onurk\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\7.0.7\\microsoft.aspnetcore.authentication.jwtbearer.7.0.7.nupkg.sha512",
     "C:\\Users\\onurk\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.5\\microsoft.aspnetcore.openapi.7.0.5.nupkg.sha512",
     "C:\\Users\\onurk\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\onurk\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
