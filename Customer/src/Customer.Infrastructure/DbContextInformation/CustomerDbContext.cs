@@ -1,6 +1,5 @@
 ﻿using Customer.Domain.DataModels;
 using Microsoft.EntityFrameworkCore;
-using System.Diagnostics.Metrics;
 
 namespace Customer.Infrastructure.DbContextInformation
 {
