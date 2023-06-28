@@ -12,3 +12,5 @@ SHA512 for password encryption.
 
 User XUnit For Test Methods
 
+Saga - Events/Choreography pattern is used for communication of microservices.
+
