@@ -1,16 +1,15 @@
 # DijitalBanking
 
-This project in development phase.
+This project is under development.
 
-Dijital Banking Sample With Micro Service Architecture
+Digital Banking Example with Micro Service Architecture
 
-This project uses CQRS and Mediatr pattern to connect DB over repositories.
+This project uses CQRS and Mediatr pattern to connect DB via repositories.
 
-Using AutoMapper to map entities.
+Uses AutoMapper to map entities.
 
 SHA512 for password encryption.
 
-User XUnit For Test Methods
+User XUnit for testing methods
 
 Saga - Events/Choreography pattern is used for communication of microservices.
-
