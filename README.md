@@ -10,6 +10,6 @@ Uses AutoMapper to map entities.
 
 SHA512 for password encryption.
 
-User XUnit for testing methods
+Use XUnit for testing methods
 
 Saga - Events/Choreography pattern is used for communication of microservices.
