@@ -1,13 +1,12 @@
 using Customer.Business.Services;
 using Customer.Business.Utilities;
-using Customer.Domain.Interfaces.Respoistories;
-using Customer.Domain.Interfaces.Respoistories.Base;
 using Customer.Domain.Interfaces.Services;
 using Customer.Domain.Interfaces.Utilities;
-using Customer.Infrastructure;
 using Customer.Infrastructure.DbContextInformation;
 using Customer.Infrastructure.Repositories;
-using Customer.Infrastructure.Repositories.Base;
+using Customer.Infrastructure.Repositories.Interfaces;
+using DigitalBanking.Common.Interfaces.Respoistory;
+using DigitalBanking.Common.Repositories;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 
@@ -29,8 +28,7 @@ builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.Loa
 
 builder.Services.AddAutoMapper(Assembly.Load("Customer.Domain"));
 
-builder.Services.AddTransient(typeof(IUnitOfWork<>), typeof(UnitOfWork<>));
-builder.Services.AddTransient(typeof(IBaseRepository<,>), typeof(BaseRepository<,>));
+builder.Services.AddTransient(typeof(IBaseRepository<,,>), typeof(BaseRepository<,,>));
 builder.Services.AddTransient<ICustomerInformationRespository, CustomerInformationRepository>();
 builder.Services.AddTransient<ICustomerSecurityRespository, CustomerSecurityRepository>();
 

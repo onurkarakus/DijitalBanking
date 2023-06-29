@@ -22,3 +22,6 @@ G:\Repos\DijitalBankingSolution\Customer\src\Customer.Domain\obj\Debug\net7.0\Cu
 G:\Repos\DijitalBankingSolution\Customer\src\Customer.Domain\obj\Debug\net7.0\refint\Customer.Domain.dll
 G:\Repos\DijitalBankingSolution\Customer\src\Customer.Domain\obj\Debug\net7.0\Customer.Domain.pdb
 G:\Repos\DijitalBankingSolution\Customer\src\Customer.Domain\obj\Debug\net7.0\ref\Customer.Domain.dll
+G:\Repos\DijitalBankingSolution\Customer\src\Customer.Domain\bin\Debug\net7.0\DigitalBanking.Common.dll
+G:\Repos\DijitalBankingSolution\Customer\src\Customer.Domain\bin\Debug\net7.0\DigitalBanking.Common.pdb
+G:\Repos\DijitalBankingSolution\Customer\src\Customer.Domain\obj\Debug\net7.0\Customer.Domain.csproj.CopyComplete

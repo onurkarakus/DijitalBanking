@@ -1,16 +1,14 @@
 ﻿using Customer.Domain.DataModels;
-using Customer.Domain.Interfaces.Respoistories;
 using Customer.Infrastructure.DbContextInformation;
-using Customer.Infrastructure.Repositories.Base;
+using Customer.Infrastructure.Repositories.Interfaces;
+using DigitalBanking.Common.Repositories;
 
 namespace Customer.Infrastructure.Repositories;
 
-public class CustomerInformationRepository : BaseRepository<CustomerInformation, int>, ICustomerInformationRespository
+public class CustomerInformationRepository : BaseRepository<CustomerInformation, int, CustomerDbContext>, ICustomerInformationRespository
 {
-    private readonly CustomerDbContext carRentalDbContext;
-
     public CustomerInformationRepository(CustomerDbContext dbContext) : base(dbContext)
     {
-        this.carRentalDbContext = dbContext;
+
     }
 }

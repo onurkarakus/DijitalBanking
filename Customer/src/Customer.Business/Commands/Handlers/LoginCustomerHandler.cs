@@ -2,9 +2,10 @@
 using Customer.Business.Commands.Response;
 using Customer.Domain.DataModels;
 using Customer.Domain.Exceptions;
-using Customer.Domain.Interfaces.Respoistories;
 using Customer.Domain.Interfaces.Services;
 using Customer.Domain.Interfaces.Utilities;
+using Customer.Infrastructure.Repositories.Interfaces;
+using DigitalBanking.Common.Exceptions;
 using MediatR;
 
 namespace Customer.Business.Commands.Handlers;
@@ -34,7 +35,7 @@ public class LoginCustomerHandler : IRequestHandler<LoginCustomerRequest, LoginC
     /// <param name="request">The request</param>
     /// <param name="cancellationToken">Cancellation token</param>
     /// <returns>Response from the request</returns>
-    /// <exception cref="Customer.Domain.Exceptions.NotFoundException">CustomerSecurity</exception>
+    /// <exception cref="DigitalBanking.Common.Exceptions.NotFoundException">CustomerSecurity</exception>
     /// <exception cref="Customer.Domain.Exceptions.InvalidPasswordException">CustomerSecurity</exception>
     public async Task<LoginCustomerResponse> Handle(LoginCustomerRequest request, CancellationToken cancellationToken)
     {

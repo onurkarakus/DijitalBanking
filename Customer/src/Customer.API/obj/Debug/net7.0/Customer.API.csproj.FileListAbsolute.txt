@@ -171,3 +171,5 @@ G:\Repos\DijitalBankingSolution\Customer\src\Customer.API\obj\Debug\net7.0\Custo
 G:\Repos\DijitalBankingSolution\Customer\src\Customer.API\obj\Debug\net7.0\Customer.API.genruntimeconfig.cache
 G:\Repos\DijitalBankingSolution\Customer\src\Customer.API\obj\Debug\net7.0\ref\Customer.API.dll
 G:\Repos\DijitalBankingSolution\Customer\src\Customer.API\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+G:\Repos\DijitalBankingSolution\Customer\src\Customer.API\bin\Debug\net7.0\DigitalBanking.Common.dll
+G:\Repos\DijitalBankingSolution\Customer\src\Customer.API\bin\Debug\net7.0\DigitalBanking.Common.pdb

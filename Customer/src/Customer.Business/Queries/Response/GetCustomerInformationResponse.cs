@@ -1,4 +1,4 @@
-﻿using Customer.Domain.Models;
+﻿using Customer.Domain.Models.ViewModels;
 
 namespace Customer.Business.Queries.Response;
 
@@ -7,5 +7,5 @@ public class GetCustomerInformationResponse
 {
     /// <summary>Gets the customer information.</summary>
     /// <value>The customer information.</value>
-    public CustomerInformationDto CustomerInformation { get; internal set; }
+    public CustomerInformationViewModel CustomerInformation { get; internal set; }
 }

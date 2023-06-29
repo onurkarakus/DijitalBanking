@@ -17,7 +17,7 @@ namespace Customer.Infrastructure.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.7")
+                .HasAnnotation("ProductVersion", "7.0.8")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -93,7 +93,7 @@ namespace Customer.Infrastructure.Migrations
                             AddressDescription = "Ev Adresi",
                             BirthDate = new DateTime(1980, 1, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             CreatedBy = "SeedBatch",
-                            CreatedDate = new DateTime(2023, 6, 21, 0, 5, 28, 97, DateTimeKind.Local).AddTicks(8919),
+                            CreatedDate = new DateTime(2023, 6, 29, 15, 33, 34, 862, DateTimeKind.Local).AddTicks(9458),
                             EmailAddress = "test@test.com",
                             FavoriteFootballTeam = "Galatasaray",
                             FirstName = "Mehmet",
@@ -102,7 +102,7 @@ namespace Customer.Infrastructure.Migrations
                             MiddleName = "Onur",
                             MobileNumber = "5555555555",
                             UpdatedBy = "SeedBatch",
-                            UpdatedDate = new DateTime(2023, 6, 21, 0, 5, 28, 97, DateTimeKind.Local).AddTicks(8936)
+                            UpdatedDate = new DateTime(2023, 6, 29, 15, 33, 34, 862, DateTimeKind.Local).AddTicks(9496)
                         });
                 });
 
@@ -167,6 +167,23 @@ namespace Customer.Infrastructure.Migrations
                     b.HasIndex("CustomerId");
 
                     b.ToTable("CustomerSecurity", "Customer");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CreatedBy = "SeedBatch",
+                            CreatedDate = new DateTime(2023, 6, 29, 15, 33, 34, 863, DateTimeKind.Local).AddTicks(60),
+                            CustomerId = 1,
+                            FailedLoginAttempts = 0,
+                            Password = "F+qm2jfPeT0sHU5Uf6ZWa2wy9QPCuKo+rbNjf5pKk4BlHJl5LL63ovDPXAMbYIZ58biqvAaTD6B23PDhK/K8TQ==",
+                            PasswordSalt = "aW2MIhfFInZM5mrK2JOcIX7wY/tmdjCk8r0M3xWvQW0=",
+                            SecurityAnswer = "Mavi",
+                            SecurityQuestion = "En sevdiğiniz renk nedir?",
+                            UpdatedBy = "SeedBatch",
+                            UpdatedDate = new DateTime(2023, 6, 29, 15, 33, 34, 863, DateTimeKind.Local).AddTicks(62),
+                            UserName = "onuryilmaz"
+                        });
                 });
 
             modelBuilder.Entity("Customer.Domain.DataModels.CustomerSecurity", b =>

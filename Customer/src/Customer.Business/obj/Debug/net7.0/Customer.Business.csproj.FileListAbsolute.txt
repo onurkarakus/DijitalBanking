@@ -32,3 +32,5 @@ G:\Repos\DijitalBankingSolution\Customer\src\Customer.Business\obj\Debug\net7.0\
 G:\Repos\DijitalBankingSolution\Customer\src\Customer.Business\obj\Debug\net7.0\refint\Customer.Business.dll
 G:\Repos\DijitalBankingSolution\Customer\src\Customer.Business\obj\Debug\net7.0\Customer.Business.pdb
 G:\Repos\DijitalBankingSolution\Customer\src\Customer.Business\obj\Debug\net7.0\ref\Customer.Business.dll
+G:\Repos\DijitalBankingSolution\Customer\src\Customer.Business\bin\Debug\net7.0\DigitalBanking.Common.dll
+G:\Repos\DijitalBankingSolution\Customer\src\Customer.Business\bin\Debug\net7.0\DigitalBanking.Common.pdb

@@ -1,4 +1,4 @@
-﻿using Customer.Domain.DataModels.Base;
+﻿using DigitalBanking.Common.DataModels;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Customer.Domain.DataModels;

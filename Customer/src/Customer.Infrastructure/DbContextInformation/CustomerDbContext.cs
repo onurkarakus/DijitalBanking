@@ -1,28 +1,28 @@
 ﻿using Customer.Domain.DataModels;
 using Microsoft.EntityFrameworkCore;
 
-namespace Customer.Infrastructure.DbContextInformation
+namespace Customer.Infrastructure.DbContextInformation;
+
+public class CustomerDbContext : DbContext
 {
-    public class CustomerDbContext : DbContext
+    public DbSet<CustomerInformation> CustomerInformations { get; set; }
+    public DbSet<CustomerSecurity> CustomerSecurities { get; set; }
+
+    public CustomerDbContext(DbContextOptions options) : base(options)
     {
-        public DbSet<CustomerInformation> CustomerInformations { get; set; }
-        public DbSet<CustomerSecurity> CustomerSecurities { get; set; }
 
-        public CustomerDbContext(DbContextOptions options) : base(options)
-        {
+    }
 
-        }
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+        //Left empty on purpose
+    }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            //Left empty on purpose
-        }
+    protected override void OnModelCreating(ModelBuilder mb)
+    {
+        base.OnModelCreating(mb);
 
-        protected override void OnModelCreating(ModelBuilder mb)
-        {
-            base.OnModelCreating(mb);
-
-            mb.Entity<CustomerInformation>()
+        mb.Entity<CustomerInformation>()
             .HasData(
             new CustomerInformation
             {
@@ -43,24 +43,21 @@ namespace Customer.Infrastructure.DbContextInformation
                 UpdatedDate = DateTime.Now
             });
 
-            mb.Entity<CustomerSecurity>()
-                .HasData(
-                new CustomerSecurity
-                {
-                    Id = 1,
-                    CustomerId = 1,
-                    Password = "F+qm2jfPeT0sHU5Uf6ZWa2wy9QPCuKo+rbNjf5pKk4BlHJl5LL63ovDPXAMbYIZ58biqvAaTD6B23PDhK/K8TQ==",
-                    PasswordSalt = "aW2MIhfFInZM5mrK2JOcIX7wY/tmdjCk8r0M3xWvQW0=",
-                    UserName = "onuryilmaz",
-                    SecurityQuestion = "En sevdiğiniz renk nedir?",
-                    SecurityAnswer = "Mavi",
-                    CreatedBy = "SeedBatch",
-                    CreatedDate = DateTime.Now,
-                    UpdatedBy = "SeedBatch",
-                    UpdatedDate = DateTime.Now
-                }
-                );
-
-        }
+        mb.Entity<CustomerSecurity>()
+            .HasData(
+            new CustomerSecurity
+            {
+                Id = 1,
+                CustomerId = 1,
+                Password = "F+qm2jfPeT0sHU5Uf6ZWa2wy9QPCuKo+rbNjf5pKk4BlHJl5LL63ovDPXAMbYIZ58biqvAaTD6B23PDhK/K8TQ==",
+                PasswordSalt = "aW2MIhfFInZM5mrK2JOcIX7wY/tmdjCk8r0M3xWvQW0=",
+                UserName = "onuryilmaz",
+                SecurityQuestion = "En sevdiğiniz renk nedir?",
+                SecurityAnswer = "Mavi",
+                CreatedBy = "SeedBatch",
+                CreatedDate = DateTime.Now,
+                UpdatedBy = "SeedBatch",
+                UpdatedDate = DateTime.Now
+            });
     }
 }

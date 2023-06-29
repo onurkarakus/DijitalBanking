@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using Customer.Domain.DataModels;
-using Customer.Domain.Models;
+using Customer.Domain.Models.ViewModels;
 
 namespace Customer.Domain.MapperProfiles;
 
@@ -8,6 +8,6 @@ public class MappingProfile: Profile
 {
     public MappingProfile()
     {
-        CreateMap<CustomerInformation, CustomerInformationDto>();        
+        CreateMap<CustomerInformation, CustomerInformationViewModel>();
     }
 }

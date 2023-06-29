@@ -1,12 +1,10 @@
 ﻿using AutoMapper;
 using Customer.Business.Commands.Request;
 using Customer.Business.Commands.Response;
-using Customer.Domain.Interfaces.Respoistories;
-using Customer.Infrastructure.DbContextInformation;
-using Customer.Infrastructure;
 using MediatR;
 using Customer.Domain.DataModels;
 using Customer.Domain.Interfaces.Utilities;
+using Customer.Infrastructure.Repositories.Interfaces;
 
 namespace Customer.Business.Commands.Handlers;
 
@@ -17,16 +15,13 @@ public class CreateCustomerHandler : IRequestHandler<CreateCustomerRequest, Crea
     private readonly ICustomerSecurityRespository customerSecurityRespository;
     private readonly IMapper mapper;
     private readonly ICryptographyUtility cryptographyUtility;
-    private readonly UnitOfWork<int> unitOfWork;
 
-    /// <summary>Initializes a new instance of the <see cref="CreateCustomerHandler" /> class.</summary>
-    /// <param name="customerDbContext">The customer database context.</param>
+    /// <summary>Initializes a new instance of the <see cref="CreateCustomerHandler" /> class.</summary>    
     /// <param name="customerInformationRepository">The customer information repository.</param>
     /// <param name="customerSecurityRespository">The customer security respository.</param>
     /// <param name="mapper">The mapper.</param>
     /// <param name="cryptographyUtility">The cryptography utility.</param>
-    public CreateCustomerHandler(
-        CustomerDbContext customerDbContext,
+    public CreateCustomerHandler(        
         ICustomerInformationRespository customerInformationRepository,
         ICustomerSecurityRespository customerSecurityRespository,
         IMapper mapper,
@@ -36,8 +31,6 @@ public class CreateCustomerHandler : IRequestHandler<CreateCustomerRequest, Crea
         this.customerSecurityRespository = customerSecurityRespository;
         this.mapper = mapper;
         this.cryptographyUtility = cryptographyUtility;
-        unitOfWork = new UnitOfWork<int>(customerDbContext);
-
     }
 
     /// <summary>Handles a request</summary>
@@ -80,10 +73,9 @@ public class CreateCustomerHandler : IRequestHandler<CreateCustomerRequest, Crea
 
         customerSecurityentity.Password = cryptographyUtility.EncryptWithSalt(request.Password, customerSecurityentity.PasswordSalt);
 
-        _ = await customerSecurityRespository.AddAsync(customerSecurityentity, cancellationToken);
+        var result = await customerSecurityRespository.AddAsync(customerSecurityentity, cancellationToken);
 
-        var commitResult = await unitOfWork.CommitAsync(cancellationToken);
 
-        return new CreateCustomerResponse() { CustomerId = createCustomerResult.Id, CustomerCreated = commitResult > 0 };
+        return new CreateCustomerResponse() { CustomerId = createCustomerResult.Id, CustomerCreated = result != null};
     }
 }

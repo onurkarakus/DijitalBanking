@@ -32,3 +32,5 @@ G:\Repos\DijitalBankingSolution\Customer\src\Customer.Infrastructure\obj\Debug\n
 G:\Repos\DijitalBankingSolution\Customer\src\Customer.Infrastructure\obj\Debug\net7.0\Customer.Infrastructure.pdb
 G:\Repos\DijitalBankingSolution\Customer\src\Customer.Infrastructure\obj\Debug\net7.0\Customer.Infrastructure.genruntimeconfig.cache
 G:\Repos\DijitalBankingSolution\Customer\src\Customer.Infrastructure\obj\Debug\net7.0\ref\Customer.Infrastructure.dll
+G:\Repos\DijitalBankingSolution\Customer\src\Customer.Infrastructure\bin\Debug\net7.0\DigitalBanking.Common.dll
+G:\Repos\DijitalBankingSolution\Customer\src\Customer.Infrastructure\bin\Debug\net7.0\DigitalBanking.Common.pdb
