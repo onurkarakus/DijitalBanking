@@ -1,4 +1,4 @@
-# DijitalBanking
+# DigitalBanking
 
 This project is under development.
 
