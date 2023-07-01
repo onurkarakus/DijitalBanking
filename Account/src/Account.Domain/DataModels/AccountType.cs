@@ -7,5 +7,6 @@ namespace Account.Domain.DataModels;
 public class AccountType : AuditableEntity<int>
 {
     public string Name { get; set; }
+
     public string Description { get; set; }
 }

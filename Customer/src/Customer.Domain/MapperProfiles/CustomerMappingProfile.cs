@@ -4,9 +4,9 @@ using Customer.Domain.Models.ViewModels;
 
 namespace Customer.Domain.MapperProfiles;
 
-public class MappingProfile: Profile
+public class CustomerMappingProfile: Profile
 {
-    public MappingProfile()
+    public CustomerMappingProfile()
     {
         CreateMap<CustomerInformation, CustomerInformationViewModel>();
     }
