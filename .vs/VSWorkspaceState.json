@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Account",
+    "\\Account\\src",
+    "\\Account\\src\\Account.API",
+    "\\Account\\src\\Account.API\\Controllers"
   ],
-  "SelectedNode": "\\DigitalBankingSolution.sln",
+  "SelectedNode": "\\Account\\src\\Account.API\\Controllers\\AccountController.cs",
   "PreviewInSolutionExplorer": false
 }
